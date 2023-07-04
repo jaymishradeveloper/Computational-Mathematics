@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematics with P5 js</title>
+    <script src="./p5.min.js"></script>
+    <script src="./jquery.min.js"></script>
+    <style>md-block { white-space: pre; font-family: monospace; }</style>
+</head>
+<body>
+<p>Its my attempt to start working on mathematics using my computer knowledge and somewhat experience!</p>
+<button id="intro">Introduction to Calculus</button>
+<button id="moser_circle">Moser's Circle</button>
+<!-- <span id="md_file_data"></span> -->
+<md-block></md-block>
+</body>
+</html>
+
+<script>
+    $(document).ready(()=>{
+
+        $("#intro").click(()=>{
+            $('md-block').load('intro.md');
+            $.getScript('intro.js');
+        })
+        $("#moser_circle").click(()=>{
+            $.getScript('moser_circle.js')
+        })
+
+        })
+</script>
